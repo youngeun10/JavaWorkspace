@@ -31,4 +31,32 @@ public class BlackBox {
         }
         return 10;
     }
+
+    // showDateTime     : 날짜정보 표시여부
+    // showSpeed        : 속도정보 표시여부
+    // min              : 영상 시간
+    void record(boolean showDateTime, boolean showSpeed, int min) {
+        System.out.println("녹화를 시작합니다.");
+        if (showDateTime) {
+            System.out.println("영상에 날짜정보가 표시됩니다.");
+        }
+        if (showSpeed) {
+            System.out.println("영상에 속도정보가 표시됩니다.");
+        }
+        System.out.println("영상은 " + min + "분 단위로 기록됩니다.");
+    }
+
+    void record() {
+        record(true, true, 5);
+    }
+
+    static void callServiceCenter() {
+        System.out.println("서비스 센터(1588-oooo)로 연결합니다.");
+        //  modelName = "test";         // 인스턴스의 변수같은 경우에는 객체가 생성되어야 쓸 수 있다. (클래스 메소드에서는 직접 접근 불가)
+        // canAutoReport = false;          // 클래스변수는 클래스 메쏘드 안에서 사용가능.
+    }
+
+    void appendModelName(String modelName) {
+        this.modelName += modelName;        // this.modelName (클래스 내의 인스턴스 변수에 접근), modelName은 파라미터로 받은 modelName
+    }
 }
