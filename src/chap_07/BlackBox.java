@@ -5,11 +5,28 @@ public class BlackBox {
     String resolution;  // 해상도
     int price;          // 가격
     String color;       // 색상
+    int serialNumber;       // 시리얼 번호
+
+    static int counter = 0;     // 시리얼 번호를 생성해주는 역할 (처음엔 0이었다가 1씩증가)
 
 //     앞에 static이 붙는 변수는 클래스 변수로 BlackBox의 인스턴스에서 공통으로 사용할 수 있는 변수이다.
 //     위의 변수처럼 static이 붙지 않은 변수들은 각 인스턴스에서만 값이 유효하다.
     static boolean canAutoReport = false;       // 자동 신고 가능
 
+    BlackBox() {        // 생성자
+        System.out.println("기본 생성자 호출");
+        this.serialNumber = ++ counter;
+        System.out.println("새로운 시리얼 넘버를 발급 받았습니다 : " + this.serialNumber);
+    }
+
+    BlackBox(String modelName, String resolution, int price, String color) {
+        this();         // 기본 생성자 호출 (BlackBox()에 접근)
+        System.out.println("사용자 정의 생성자 호출");
+        this.modelName = modelName;
+        this.resolution = resolution;
+        this.price = price;
+        this.color = color;
+    }
     void autoReport() {
         if (canAutoReport) {
             System.out.println("충돌이 감지되어 자동으로 신고합니다.");
