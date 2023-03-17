@@ -4,8 +4,10 @@ package chap_07.camera;
 public class FactoryCam extends  Camera{           // Camera의 자식 클래스
 
     public FactoryCam() {
-        this.name = "공장 카메라";
+        // this.name = "공장 카메라";
+        super("공장 카메라");
     }
+
 
     public void detectFire() {
         // 화재 감지

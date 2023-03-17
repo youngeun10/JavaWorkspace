@@ -4,7 +4,12 @@ public class Camera {       // 부모 클래스
     public String name;
 
     public Camera() {
-        this.name = "카메라";
+        this("카메라");    // protected Camera(String name) 실행
+    }
+
+    protected Camera(String name)  {
+        // protected : 같은 패키지 내에서 접근이 가능하지만 다른 패키지에서는 자식 클래스에서 접근 가능
+        this.name = name;
     }
 
     public void takePicture() {
