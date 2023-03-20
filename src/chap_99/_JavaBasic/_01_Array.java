@@ -1,6 +1,4 @@
-package chap_99._Array;
-
-import java.util.Arrays;
+package chap_99._JavaBasic;
 
 public class _01_Array {
     public static void main(String[] args) {

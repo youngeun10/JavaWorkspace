@@ -1,4 +1,4 @@
-package chap_99._Array;
+package chap_99._JavaBasic;
 
 public class _02_Random {
     public static void main(String[] args) {
