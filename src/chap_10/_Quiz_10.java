@@ -29,8 +29,8 @@ public class _Quiz_10 {
 }
 
 class Customer {
-    String name;
-    int age;
+    public String name;
+    public int age;
 
     public Customer(String name, int age) {
         this.name = name;
