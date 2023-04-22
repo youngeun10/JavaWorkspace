@@ -3,7 +3,7 @@ package chap_11;
 public class _03_Throw {
     public static void main(String[] args) {
         /*
-            Throw: 우리가 원해서 에러를 발생시키는 경
+            Throw: 우리가 원해서 에러를 발생시키는 경우
         */
         int age = 17;       // 만 17세
         try{
