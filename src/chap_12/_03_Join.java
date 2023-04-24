@@ -13,7 +13,7 @@ public class _03_Join {
         try {
             // join의 역할: 현재 있는 쓰레드가 끝날때 까지 기다린 다음 다음 줄 실행
             // 시간정보를 입력하면 해당 시간까지 기다리는데 이 시간이 지나도 쓰레드가 끝나지 않으면 그냥 넘어감.
-            thread.join(2500);
+            thread.join();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
